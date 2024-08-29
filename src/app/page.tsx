@@ -13,11 +13,12 @@ const Home:React.FC=()=> {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsValid(validateSIN(sin));
+    setIsValid(validateSIN(sin)); //set if sin is valid
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
+    // This regular expression matches a string that contains only digits (0-9) or is empty.
     if (/^\d*$/.test(value)) {
       setSin(value);
     }
@@ -28,15 +29,15 @@ const Home:React.FC=()=> {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
       <div className="container relative">
           <div className="max-w-[400px] w-full m-auto p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-800 rounded-md">
-            <h5 className="my-6 text-xl font-semibold justify-center flex">SIN Number Validator</h5>
+            <h5 className="my-6 text-xl font-semibold justify-center flex">SIN Validator</h5>
               <p className="text-slate-400 mb-6">
                 Please enter a 9 digits SIN to check if it is valid.
               </p>
               <form className="text-start" onSubmit={handleSubmit}>
 
                   <div className="mb-5">
-                    <label className="font-semibold" htmlFor="LoginEmail">
-                      SIN Number:
+                    <label className="font-semibold">
+                      Your SIN:
                     </label>
                     <input
                       type="text"

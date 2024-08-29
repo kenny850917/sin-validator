@@ -5,7 +5,7 @@ export const validateSIN = (sin: string): boolean => {
         return false;
     }
 
-    const digits = sin.split('').map(Number);
+    const digits = sin.split('').map(Number);//put input into array of int
     let sum = 0;
 
     // Apply Luhn Algorithm: Double every second digit from the right
