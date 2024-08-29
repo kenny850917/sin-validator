@@ -6,7 +6,7 @@ This project is a Social Insurance Number (SIN) Validator built with Next.js 14 
 ## Live Demo
 
 The project is deployed on Vercel and can be accessed at:
-[https://sin-validator-e2skufpv7-kenny850917s-projects.vercel.app/](https://sin-validator-e2skufpv7-kenny850917s-projects.vercel.app/)
+[https://sin-validator-vert.vercel.app/](https://sin-validator-vert.vercel.app/)
 
 ## Installation
 
