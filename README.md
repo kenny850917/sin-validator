@@ -13,7 +13,7 @@ The project is deployed on Vercel and can be accessed at:
 To get started with this project, follow these steps:
 
 1. **Clone the Repository**:
-   git clone https://github.com/yourusername/sin-validator.git
+   git clone https://github.com/kenny850917/sin-validator.git
    cd sin-validator
    or use github desktop
 Install Dependencies: Install the required packages:
