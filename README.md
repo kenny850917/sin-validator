@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SIN Validator Assessment
 
-## Getting Started
+This project is a Social Insurance Number (SIN) Validator built with Next.js 14 and TypeScript. The app lets users enter a SIN and checks if it’s valid using a special math formula called the Luhn Algorithm.
 
-First, run the development server:
+## Installation
 
-```bash
+To get started with this project, follow these steps:
+
+1. **Clone the Repository**:
+   git clone https://github.com/yourusername/sin-validator.git
+   cd sin-validator
+   or use github desktop
+Install Dependencies: Install the required packages:
+
+npm install
+
+2. **Start the Development Server**:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open the App: Go to http://localhost:3000 in your web browser. You will see the SIN Validator interface.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
+Here’s an overview of the key files and folders in this project:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+sin-validator/
+├── src/
+│   ├── app/
+│   │   └── index.tsx              # Main page of the app
+│   ├── utils/
+│   │   ├── validateSIN.ts         # Function to check if SIN is valid
+│   │   └── validateSIN.test.ts    # Tests for the validateSIN function
+├── public/                        # Static files like images
+├── jest.config.js                 # Configuration for running tests
+├── tsconfig.json                  # TypeScript settings
+└── package.json                   # Project info and scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Explanation:
+src/app/index.tsx: This is the main page of the app where users can enter their SIN and get results.
 
-## Learn More
+src/utils/validateSIN.ts: This file has the code that checks if the SIN is valid using the Luhn Algorithm.
 
-To learn more about Next.js, take a look at the following resources:
+src/utils/validateSIN.test.ts: This file contains tests to make sure the validateSIN function works correctly.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+jest.config.js: Settings for Jest, the tool used for running tests.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+tsconfig.json: Configuration for TypeScript to ensure the code runs correctly.
 
-## Deploy on Vercel
+## Features
+SIN Validation: Checks if the SIN is 9 digits long and valid according to the Luhn Algorithm.
+Instant Feedback: Users get results immediately without reloading the page.
+Running Tests
+To make sure everything works properly, you can run the tests:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+npm run test
+The tests will check if the SIN validation works as expected. You can add more test cases if wishes.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Example:
+Input: 046454286
+Result: The algorithm confirms this is a valid SIN.
+This project is now ready to be used and tested. If you have any questions, feel free to ask!
